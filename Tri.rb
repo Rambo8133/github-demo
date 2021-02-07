@@ -1,8 +1,10 @@
-array=[]
+array=ARGV.dup
 
-for i in ARGV
-	array.push ARGV[i].to_i
+
+for j in (0..array.length-1)
+	array[j]=array[j].to_i
 end
+
 
 #Fonction tri
 def tri (array)
@@ -11,4 +13,4 @@ def tri (array)
 	p array
 end
 
-puts tri(array)
+puts tri(array).join(' ')
